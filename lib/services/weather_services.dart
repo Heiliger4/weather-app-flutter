@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:project_name/models/weather_model.dart';
 
 class WeatherService {
-  static const BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
+  static const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
   final String API_KEY;
 
   WeatherService(this.API_KEY);
@@ -16,7 +16,7 @@ class WeatherService {
     if (response.statusCode == 200) {
       return Weather.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to load weather data');
+      throw Exception('Failed to load weather dataeee');
     }
   }
 
